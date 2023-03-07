@@ -1407,7 +1407,4 @@ function MoonriseLib:App(name, icon, parent)
 
 	return PageContent
 end
-
-return ChannelHold
-end
 return MoonriseLib
