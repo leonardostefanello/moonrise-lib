@@ -110,7 +110,7 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 
 ------------------------------//functions//------------------------------
 --//make app
-function MoonriseLib:App(Name, Icon, Parent)
+function MoonriseLib:App(Name, Icon)
 	local NewApp = Instance.new("Frame")
 	local appIcon = Instance.new("ImageButton")
 	local appName = Instance.new("TextLabel")
@@ -118,7 +118,7 @@ function MoonriseLib:App(Name, Icon, Parent)
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 	NewApp.Name = string.lower(Name).."App"
-	NewApp.Parent = Parent
+	NewApp.Parent = msApps1
 	NewApp.AnchorPoint = Vector2.new(0.5, 0.5)
 	NewApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	NewApp.BackgroundTransparency = 1.000
@@ -132,7 +132,7 @@ function MoonriseLib:App(Name, Icon, Parent)
 	appIcon.BackgroundTransparency = 1
 	appIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
 	appIcon.Size = UDim2.new(1, 0, 1, 0)
-	appIcon.Image = "rbxassetid://"..tostring(Icon)
+	appIcon.Image = Icon
 	--UICorner
 	UICorner.CornerRadius = UDim.new(0.25, 0)
 	UICorner.Parent = appIcon
