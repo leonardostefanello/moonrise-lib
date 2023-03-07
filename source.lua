@@ -129,7 +129,7 @@ function MoonriseLib:App(Name, Icon, Parent)
 	local UICorner = Instance.new("UICorner")
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
-	NewApp.Name = string.lower(name).."App"
+	NewApp.Name = string.lower(Name).."App"
 	NewApp.Parent = Parent
 	NewApp.AnchorPoint = Vector2.new(0.5, 0.5)
 	NewApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
