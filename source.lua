@@ -456,8 +456,6 @@ function MoonriseLib:App(name, icon, parent)
 			toggled = not toggled
 			pcall(callback, toggled)
 		end)
-
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 	end
 
 	function PageContent:Slider(text, min, max, start, callback)
@@ -638,7 +636,6 @@ function MoonriseLib:App(name, icon, parent)
 			pcall(callback, tochange)
 		end
 
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 		return SliderFunc
 	end
 	function PageContent:Seperator()
@@ -658,7 +655,6 @@ function MoonriseLib:App(name, icon, parent)
 		Seperator2.BorderSizePixel = 0
 		Seperator2.Position = UDim2.new(0, 0, 0, 4)
 		Seperator2.Size = UDim2.new(0, 401, 0, 1)
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 	end
 	function PageContent:Dropdown(text, list, callback)
 		local DropFunc = {}
@@ -814,13 +810,11 @@ function MoonriseLib:App(name, icon, parent)
 				DropdownFrameMain.Visible = true
 				DropdownFrameMainOutline.Visible = true
 				Dropdown.Size = UDim2.new(0, 403, 0, 73 + DropdownFrameMainOutline.AbsoluteSize.Y)
-				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 
 			else
 				Dropdown.Size = UDim2.new(0, 403, 0, 73)
 				DropdownFrameMain.Visible = false
 				DropdownFrameMainOutline.Visible = false
-				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 			end
 			DropTog = not DropTog
 		end)
@@ -884,7 +878,6 @@ function MoonriseLib:App(name, icon, parent)
 				Dropdown.Size = UDim2.new(0, 403, 0, 73)
 				DropdownFrameMain.Visible = false
 				DropdownFrameMainOutline.Visible = false
-				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 				DropTog = not DropTog
 			end)
 
@@ -894,8 +887,6 @@ function MoonriseLib:App(name, icon, parent)
 			DropdownFrameMain.Size = UDim2.new(0, 392, 0, framesize + 6)
 			DropdownFrameMainOutline.Size = UDim2.new(0, 396, 0, framesize + 10)
 		end
-
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 
 		function DropFunc:Clear()
 			for i,v in next, DropItemHolder:GetChildren() do
@@ -914,7 +905,6 @@ function MoonriseLib:App(name, icon, parent)
 			Dropdown.Size = UDim2.new(0, 403, 0, 73)
 			DropdownFrameMain.Visible = false
 			DropdownFrameMainOutline.Visible = false
-			ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 		end
 
 		function DropFunc:Add(textadd)
@@ -975,7 +965,6 @@ function MoonriseLib:App(name, icon, parent)
 				Dropdown.Size = UDim2.new(0, 403, 0, 73)
 				DropdownFrameMain.Visible = false
 				DropdownFrameMainOutline.Visible = false
-				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 				DropTog = not DropTog
 			end)
 
@@ -1217,7 +1206,6 @@ function MoonriseLib:App(name, icon, parent)
 			end
 		)
 
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 	end
 
 	function PageContent:Textbox(text, placetext, disapper, callback)
@@ -1308,7 +1296,6 @@ function MoonriseLib:App(name, icon, parent)
 			end
 		end)
 
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 	end
 
 	function PageContent:Label(text)
@@ -1339,7 +1326,6 @@ function MoonriseLib:App(name, icon, parent)
 		LabelTitle.TextSize = 14.000
 		LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
 
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 	end
 
 	function PageContent:Bind(text, presetbind, callback)
@@ -1402,7 +1388,6 @@ function MoonriseLib:App(name, icon, parent)
 			end
 		end
 		)
-		ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 	end
 
 	return PageContent
