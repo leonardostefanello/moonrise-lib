@@ -242,6 +242,13 @@ function MoonriseLib:App(Name, Icon)
 	title.TextSize = 14.000
 	title.TextWrapped = true
 
+	appIcon.MouseButton1Click:Connect(function()
+		NewPage.Visible = true
+	end)
+
+	close.MouseButton1Click:Connect(function()
+		NewPage.Visible = false
+	end)
 
 	--//Content (Buttons Inside Page)
 	local PageContent = {}
