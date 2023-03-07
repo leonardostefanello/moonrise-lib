@@ -299,7 +299,7 @@ function MoonriseLib:App(Name, Icon)
 		Content.TextWrapped = true
 		Content.TextXAlignment = Enum.TextXAlignment.Left
 
-		Button.MouseEnter:Connect(function()
+		TextButton.MouseEnter:Connect(function()
 			TweenService:Create(
 				Button, 
 				TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
@@ -307,7 +307,7 @@ function MoonriseLib:App(Name, Icon)
 			):Play()
 		end)
 
-		Button.MouseButton1Up:Connect(function()
+		TextButton.MouseButton1Up:Connect(function()
 			pcall(callback)
 			TweenService:Create(
 				Button, 
@@ -316,7 +316,7 @@ function MoonriseLib:App(Name, Icon)
 			):Play()
 		end)
 
-		Button.MouseButton1Down:Connect(function()
+		TextButton.MouseButton1Down:Connect(function()
 			TweenService:Create(
 				Button, 
 				TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
@@ -324,7 +324,7 @@ function MoonriseLib:App(Name, Icon)
 			):Play()
 		end)
 
-		Button.MouseLeave:Connect(function()
+		TextButton.MouseLeave:Connect(function()
 			TweenService:Create(
 				Button, 
 				TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
@@ -334,4 +334,14 @@ function MoonriseLib:App(Name, Icon)
 	end
 	return PageContent
 end
+
+function MoonriseLib:Destroy()
+	for i, v in pairs(phoneUI:GetDescendants()) do
+		if string.sub(v.Name, 1, 2) == "ms" then
+			print(v)
+			v:Destroy()
+		end
+	end
+end
+
 return MoonriseLib
