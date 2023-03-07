@@ -122,7 +122,7 @@ msPages.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ------------------------------//functions//------------------------------
 --//make app
-function MoonriseLib:App(name, icon, parent)
+function MoonriseLib:App(Name, Icon, Parent)
 	local NewApp = Instance.new("Frame")
 	local appIcon = Instance.new("ImageButton")
 	local appName = Instance.new("TextLabel")
@@ -130,7 +130,7 @@ function MoonriseLib:App(name, icon, parent)
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 	NewApp.Name = string.lower(name).."App"
-	NewApp.Parent = parent
+	NewApp.Parent = Parent
 	NewApp.AnchorPoint = Vector2.new(0.5, 0.5)
 	NewApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	NewApp.BackgroundTransparency = 1.000
@@ -141,10 +141,10 @@ function MoonriseLib:App(name, icon, parent)
 	appIcon.Name = "appIcon"
 	appIcon.Parent = NewApp
 	appIcon.AnchorPoint = Vector2.new(0.5, 0.5)
-	appIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	appIcon.BackgroundTransparency = 1
 	appIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
 	appIcon.Size = UDim2.new(1, 0, 1, 0)
-	appIcon.Image = "rbxassetid://"..tostring(icon)
+	appIcon.Image = "rbxassetid://"..tostring(Icon)
 	--UICorner
 	UICorner.CornerRadius = UDim.new(0.25, 0)
 	UICorner.Parent = appIcon
@@ -156,7 +156,7 @@ function MoonriseLib:App(name, icon, parent)
 	appName.BackgroundTransparency = 1.000
 	appName.Position = UDim2.new(0.5, 0, 1.04999995, 0)
 	appName.Size = UDim2.new(1, 0, 0.280000001, 0)
-	appName.Text = name
+	appName.Text = Name
 	appName.TextColor3 = Color3.fromRGB(255, 255, 255)
 	appName.TextScaled = true
 	appName.TextSize = 14.000
