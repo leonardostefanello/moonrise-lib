@@ -10,7 +10,6 @@ local HttpService = game:GetService("HttpService")
 ----------//Info//----------
 local pfp
 local user
-local tag
 local userinfo = {}
 
 ----------//SWFL-Phone//----------
@@ -24,12 +23,10 @@ end)
 
 pfp = userinfo["pfp"] or "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Players.LocalPlayer.UserId .."&width=420&height=420&format=png"
 user =  userinfo["user"] or game.Players.LocalPlayer.Name
-tag = userinfo["tag"] or tostring(math.random(1000,9999))
 
 local function SaveInfo()
 	userinfo["pfp"] = pfp
 	userinfo["user"] = user
-	userinfo["tag"] = tag
 	writefile("moonrisephoneinfo.txt", HttpService:JSONEncode(userinfo));
 end
 
@@ -83,7 +80,6 @@ msApps2.BorderSizePixel = 0
 msApps2.ClipsDescendants = true
 msApps2.Position = UDim2.new(0.537042737, 0, 0.209715694, 0)
 msApps2.Size = UDim2.new(0.400913656, 0, 0.65028429, 0)
-msApps2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 --UIGridLayout2
 UIGridLayout2.Parent = msApps2
 UIGridLayout2.SortOrder = Enum.SortOrder.LayoutOrder
@@ -100,7 +96,6 @@ msNew.BackgroundTransparency = 1.000
 msNew.BorderSizePixel = 0
 msNew.ClipsDescendants = true
 msNew.Size = UDim2.new(1, 0, 1, 0)
-msNew.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 --//pages folder
 local msPages = Instance.new("Frame")
@@ -112,7 +107,6 @@ msPages.BackgroundTransparency = 1.000
 msPages.BorderSizePixel = 0
 msPages.ClipsDescendants = true
 msPages.Size = UDim2.new(1, 0, 1, 0)
-msPages.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ------------------------------//functions//------------------------------
 --//make app
@@ -177,7 +171,6 @@ function MoonriseLib:App(Name, Icon, Parent)
 	NewPage.ClipsDescendants = true
 	NewPage.Size = UDim2.new(1, 0, 1, 0)
 	NewPage.Visible = false
-	NewPage.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	ItemContainer.Name = "ItemContainer"
 	ItemContainer.Parent = NewPage
