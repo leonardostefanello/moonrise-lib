@@ -53,11 +53,6 @@ local function GetIcon(IconName)
 end   
 
 ------------------------------//UI//------------------------------
-local Moonrise = Instance.new("ScreenGui")
-Moonrise.Name = "Moonrise"
-Moonrise.Parent = game.CoreGui
-Moonrise.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 --//app folder 1
 local msApps1 = Instance.new("Frame")
 local UIGridLayout = Instance.new("UIGridLayout")
@@ -70,7 +65,6 @@ msApps1.BorderSizePixel = 0
 msApps1.ClipsDescendants = true
 msApps1.Position = UDim2.new(0.0620429032, 0, 0.209715754, 0)
 msApps1.Size = UDim2.new(0.400914609, 0, 0.65028429, 0)
-msApps1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 --UIGridLayout
 UIGridLayout.Parent = msApps1
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
