@@ -176,7 +176,7 @@ function MoonriseLib:App(Name, Icon, Parent)
 	local UICorner = Instance.new("UICorner")
 	local title = Instance.new("TextLabel")
 
-	NewPage.Name = string.lower(AppConfig.Name).."Page"
+	NewPage.Name = string.lower(Name).."Page"
 	NewPage.Parent = msPages
 	NewPage.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 	NewPage.BorderSizePixel = 0
