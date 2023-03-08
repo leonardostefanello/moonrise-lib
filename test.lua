@@ -50,6 +50,61 @@ local function GetIcon(IconName)
 end   
 
 ------------------------------//UI//------------------------------
+--//destroy button
+local msDestroy = Instance.new("TextButton")
+
+msDestroy.Name = "msDestroy"
+msDestroy.Parent = phoneUI.screenF
+msDestroy.AnchorPoint = Vector2.new(1, 0.5)
+msDestroy.BackgroundTransparency = 1.000
+msDestroy.BorderSizePixel = 0
+msDestroy.Position = UDim2.new(-0.0397357531, 0, 0.162435979, 0)
+msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
+msDestroy.Text = ""
+msDestroy.TextTransparency = 1.000
+
+msDestroy.MouseButton1Click:Connect(function()
+	MoonriseLib:Destroy()
+end)
+
+--//main background
+local msMainBG = Instance.new("ImageLabel")
+msMainBG.Name = "msMainBG"
+msMainBG.Parent = homeF
+msMainBG.AnchorPoint = Vector2.new(0.5, 0.5)
+msMainBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+msMainBG.BorderSizePixel = 0
+msMainBG.Position = UDim2.new(0.5, 0, 0.5, 0)
+msMainBG.Size = UDim2.new(1, 0, 1, 0)
+msMainBG.Image = "rbxassetid://12166869331"
+
+--//lockF things
+local msLockBG = Instance.new("ImageLabel")
+local msSecret = Instance.new("TextLabel")
+
+msLockBG.Name = "msLockBG"
+msLockBG.Parent = phoneUI.screenF.screenFrame.lockF
+msLockBG.AnchorPoint = Vector2.new(0.5, 0.5)
+msLockBG.BackgroundTransparency = 1.000
+msLockBG.BorderSizePixel = 0
+msLockBG.Position = UDim2.new(0.5, 0, 0.5, 0)
+msLockBG.Size = UDim2.new(1, 0, 1, 0)
+msLockBG.Image = "rbxassetid://7048616202"
+
+msSecret.Name = "msSecret"
+msSecret.Parent = phoneUI.screenF.screenFrame.lockF
+msSecret.AnchorPoint = Vector2.new(0.5, 0.5)
+msSecret.BackgroundTransparency = 1.000
+msSecret.BorderSizePixel = 0
+msSecret.Position = UDim2.new(0.5, 0, 0.949999988, 0)
+msSecret.Size = UDim2.new(1, 0, 0.0305686034, 0)
+msSecret.Font = Enum.Font.Unknown
+msSecret.Text = "soo many bugs in this game, who is going to fix it? me?"
+msSecret.TextColor3 = Color3.fromRGB(255, 255, 255)
+msSecret.TextScaled = true
+msSecret.TextSize = 5.000
+msSecret.TextWrapped = true
+
 --//app folder
 local msApps = Instance.new("Frame")
 
@@ -118,61 +173,6 @@ msPages.BackgroundTransparency = 1.000
 msPages.BorderSizePixel = 0
 msPages.ClipsDescendants = true
 msPages.Size = UDim2.new(1, 0, 1, 0)
-
---//main background
-local msMainBG = Instance.new("ImageLabel")
-msMainBG.Name = "msMainBG"
-msMainBG.Parent = homeF
-msMainBG.AnchorPoint = Vector2.new(0.5, 0.5)
-msMainBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-msMainBG.BorderSizePixel = 0
-msMainBG.Position = UDim2.new(0.5, 0, 0.5, 0)
-msMainBG.Size = UDim2.new(1, 0, 1, 0)
-msMainBG.Image = "rbxassetid://12166869331"
-
---//lockF things
-local msLockBG = Instance.new("ImageLabel")
-
-msLockBG.Name = "msLockBG"
-msLockBG.Parent = phoneUI.screenF.screenFrame.lockF
-msLockBG.AnchorPoint = Vector2.new(0.5, 0.5)
-msLockBG.BackgroundTransparency = 1.000
-msLockBG.BorderSizePixel = 0
-msLockBG.Position = UDim2.new(0.5, 0, 0.5, 0)
-msLockBG.Size = UDim2.new(1, 0, 1, 0)
-msLockBG.Image = "rbxassetid://7048616202"
-
-local msSecret = Instance.new("TextLabel")
-msSecret.Name = "msSecret"
-msSecret.Parent = phoneUI.screenF.screenFrame.lockF
-msSecret.AnchorPoint = Vector2.new(0.5, 0.5)
-msSecret.BackgroundTransparency = 1.000
-msSecret.BorderSizePixel = 0
-msSecret.Position = UDim2.new(0.5, 0, 0.949999988, 0)
-msSecret.Size = UDim2.new(1, 0, 0.0305686034, 0)
-msSecret.Font = Enum.Font.Unknown
-msSecret.Text = "soo many bugs in this game, who is going to fix it? me?"
-msSecret.TextColor3 = Color3.fromRGB(255, 255, 255)
-msSecret.TextScaled = true
-msSecret.TextSize = 5.000
-msSecret.TextWrapped = true
-
---//destroy button
-local msDestroy = Instance.new("TextButton")
-
-msDestroy.Name = "msDestroy"
-msDestroy.Parent = phoneUI.screenF
-msDestroy.AnchorPoint = Vector2.new(1, 0.5)
-msDestroy.BackgroundTransparency = 1.000
-msDestroy.BorderSizePixel = 0
-msDestroy.Position = UDim2.new(-0.0397357531, 0, 0.162435979, 0)
-msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
-msDestroy.Text = ""
-msDestroy.TextTransparency = 1.000
-
-msDestroy.MouseButton1Click:Connect(function()
-	MoonriseLib:Destroy()
-end)
 
 ------------------------------//functions//------------------------------
 --//make app
