@@ -128,15 +128,13 @@ msMainBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 msMainBG.BorderSizePixel = 0
 msMainBG.Position = UDim2.new(0.5, 0, 0.5, 0)
 msMainBG.Size = UDim2.new(1, 0, 1, 0)
-msMainBG.ZIndex = 0
 msMainBG.Image = "rbxassetid://12166869331"
 
 --//lockF things
 local msLockBG = Instance.new("ImageLabel")
-local msSecret = Instance.new("TextLabel")
 
 msLockBG.Name = "msLockBG"
-msLockBG.Parent = phoneUI.screenFrame.lockF
+msLockBG.Parent = phoneUI.screenF.screenFrame.lockF
 msLockBG.AnchorPoint = Vector2.new(0.5, 0.5)
 msLockBG.BackgroundTransparency = 1.000
 msLockBG.BorderSizePixel = 0
@@ -144,8 +142,9 @@ msLockBG.Position = UDim2.new(0.5, 0, 0.5, 0)
 msLockBG.Size = UDim2.new(1, 0, 1, 0)
 msLockBG.Image = "rbxassetid://7048616202"
 
+local msSecret = Instance.new("TextLabel")
 msSecret.Name = "msSecret"
-msSecret.Parent = phoneUI.screenFrame.lockF
+msSecret.Parent = phoneUI.screenF.screenFrame.lockF
 msSecret.AnchorPoint = Vector2.new(0.5, 0.5)
 msSecret.BackgroundTransparency = 1.000
 msSecret.BorderSizePixel = 0
