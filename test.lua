@@ -137,78 +137,78 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 
 --//configApp rewrite
 --config app
-	toggleapp("settingsApp", false)
-	local configApp = Instance.new("Frame")
-	local appB1 = Instance.new("ImageButton")
-	local UICorner1 = Instance.new("UICorner")
-	local appT1 = Instance.new("TextLabel")
-	local UIAspectRatioConstraint1 = Instance.new("UIAspectRatioConstraint")
+toggleapp("settingsApp", false)
+local configApp = Instance.new("Frame")
+local appB1 = Instance.new("ImageButton")
+local UICorner1 = Instance.new("UICorner")
+local appT1 = Instance.new("TextLabel")
+local UIAspectRatioConstraint1 = Instance.new("UIAspectRatioConstraint")
 	
-	configApp.Name = "configApp"
-	configApp.Parent = msRewrite
-	configApp.AnchorPoint = Vector2.new(0.5, 0.5)
-	configApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	configApp.BackgroundTransparency = 1.000
-	configApp.BorderSizePixel = 0
-	configApp.Position = UDim2.new(0.850000024, 0, 0.125, 0)
-	configApp.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
+configApp.Name = "configApp"
+configApp.Parent = msRewrite
+configApp.AnchorPoint = Vector2.new(0.5, 0.5)
+configApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+configApp.BackgroundTransparency = 1.000
+configApp.BorderSizePixel = 0
+configApp.Position = UDim2.new(0.850000024, 0, 0.125, 0)
+configApp.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
 
-	appB1.Name = "appB"
-	appB1.Parent = configApp
-	appB1.AnchorPoint = Vector2.new(0.5, 0.5)
-	appB1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	appB1.BackgroundTransparency = 1.000
-	appB1.Position = UDim2.new(0.5, 0, 0.5, 0)
-	appB1.Size = UDim2.new(1, 0, 1, 0)
-	appB1.Image = icon or "rbxassetid://7027865484"
+appB1.Name = "appB"
+appB1.Parent = configApp
+appB1.AnchorPoint = Vector2.new(0.5, 0.5)
+appB1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+appB1.BackgroundTransparency = 1.000
+appB1.Position = UDim2.new(0.5, 0, 0.5, 0)
+appB1.Size = UDim2.new(1, 0, 1, 0)
+appB1.Image = icon or "rbxassetid://7027865484"
 
-	UICorner1.CornerRadius = UDim.new(0.25, 0)
-	UICorner1.Parent = appB1
+UICorner1.CornerRadius = UDim.new(0.25, 0)
+UICorner1.Parent = appB1
 
-	appT1.Name = "appT"
-	appT1.Parent = appB1
-	appT1.AnchorPoint = Vector2.new(0.5, 0)
-	appT1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	appT1.BackgroundTransparency = 1.000
-	appT1.Position = UDim2.new(0.5, 0, 1.04999995, 0)
-	appT1.Size = UDim2.new(1, 0, 0.280000001, 0)
-	appT1.Text = "Settings"
-	appT1.TextColor3 = Color3.fromRGB(255, 255, 255)
-	appT1.TextScaled = true
-	appT1.TextSize = 14.000
-	appT1.TextStrokeTransparency = 0.900
-	appT1.TextWrapped = true
+appT1.Name = "appT"
+appT1.Parent = appB1
+appT1.AnchorPoint = Vector2.new(0.5, 0)
+appT1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+appT1.BackgroundTransparency = 1.000
+appT1.Position = UDim2.new(0.5, 0, 1.04999995, 0)
+appT1.Size = UDim2.new(1, 0, 0.280000001, 0)
+appT1.Text = "Settings"
+appT1.TextColor3 = Color3.fromRGB(255, 255, 255)
+appT1.TextScaled = true
+appT1.TextSize = 14.000
+appT1.TextStrokeTransparency = 0.900
+appT1.TextWrapped = true
 
-	UIAspectRatioConstraint1.Parent = configApp
+UIAspectRatioConstraint1.Parent = configApp
 	
-	--config app (shelf)
-	local configAppShelf = Instance.new("Frame")
-	local appB2 = Instance.new("ImageButton")
-	local UICorner2 = Instance.new("UICorner")
-	local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint")
+--config app (shelf)
+local configAppShelf = Instance.new("Frame")
+local appB2 = Instance.new("ImageButton")
+local UICorner2 = Instance.new("UICorner")
+local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint")
 	
-	configAppShelf.Name = "configAppShelf"
-	configAppShelf.Parent = msRewrite
-	configAppShelf.AnchorPoint = Vector2.new(0.5, 0.5)
-	configAppShelf.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	configAppShelf.BackgroundTransparency = 1.000
-	configAppShelf.BorderSizePixel = 0
-	configAppShelf.Position = UDim2.new(0.150000006, 0, 0.925000012, 0)
-	configAppShelf.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
+configAppShelf.Name = "configAppShelf"
+configAppShelf.Parent = msRewrite
+configAppShelf.AnchorPoint = Vector2.new(0.5, 0.5)
+configAppShelf.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+configAppShelf.BackgroundTransparency = 1.000
+configAppShelf.BorderSizePixel = 0
+configAppShelf.Position = UDim2.new(0.150000006, 0, 0.925000012, 0)
+configAppShelf.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
 
-	appB2.Name = "appB"
-	appB2.Parent = configAppShelf
-	appB2.AnchorPoint = Vector2.new(0.5, 0.5)
-	appB2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	appB2.BackgroundTransparency = 1.000
-	appB2.Position = UDim2.new(0.5, 0, 0.5, 0)
-	appB2.Size = UDim2.new(1, 0, 1, 0)
-	appB2.Image = "rbxassetid://7027865484"
+appB2.Name = "appB"
+appB2.Parent = configAppShelf
+appB2.AnchorPoint = Vector2.new(0.5, 0.5)
+appB2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+appB2.BackgroundTransparency = 1.000
+appB2.Position = UDim2.new(0.5, 0, 0.5, 0)
+appB2.Size = UDim2.new(1, 0, 1, 0)
+appB2.Image = "rbxassetid://7027865484"
 
-	UICorner2.CornerRadius = UDim.new(0.25, 0)
-	UICorner2.Parent = appB2
+UICorner2.CornerRadius = UDim.new(0.25, 0)
+UICorner2.Parent = appB2
 
-	UIAspectRatioConstraint2.Parent = configAppShelf
+UIAspectRatioConstraint2.Parent = configAppShelf
 
 --//main background
 local msMainBG = Instance.new("ImageLabel")
@@ -231,7 +231,7 @@ msLockBG.BackgroundTransparency = 1.000
 msLockBG.BorderSizePixel = 0
 msLockBG.Position = UDim2.new(0.5, 0, 0.5, 0)
 msLockBG.Size = UDim2.new(1, 0, 1, 0)
-msLockBG.Image = "rbxassetid://7048616202"
+msLockBG.Image = "rbxassetid://12166869331"
 
 local msSecret = Instance.new("TextLabel")
 
