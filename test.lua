@@ -52,13 +52,13 @@ end
 ------------------------------//UI//------------------------------
 --//app folder
 local msApps = Instance.new("Frame")
-msApps.Name = "msApps"
-msApps.Parent = homeF.appButtons
-msApps.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-msApps.BackgroundTransparency = 1.000
-msApps.BorderSizePixel = 0
-msApps.ClipsDescendants = true
-msApps.Size = UDim2.new(1, 0, 1, 0)
+msApps.appButtons.Name = "msApps"
+msApps.appButtons.Parent = phoneUI.homeF
+msApps.appButtons.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+msApps.appButtons.BackgroundTransparency = 1.000
+msApps.appButtons.BorderSizePixel = 0
+msApps.appButtons.ClipsDescendants = true
+msApps.appButtons.Size = UDim2.new(1, 0, 1, 0)
 
 --//right app frame
 local msAppsR = Instance.new("Frame")
