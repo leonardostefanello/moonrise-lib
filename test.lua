@@ -52,8 +52,9 @@ end
 ------------------------------//UI//------------------------------
 --//app folder
 local msApps = Instance.new("Frame")
+
 msApps.Name = "msApps"
-msApps.Parent = phoneUI.homeF
+msApps.Parent = homeF.appButtons
 msApps.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 msApps.BackgroundTransparency = 1.000
 msApps.BorderSizePixel = 0
