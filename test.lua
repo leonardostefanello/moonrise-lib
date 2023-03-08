@@ -129,7 +129,8 @@ msPages.ClipsDescendants = true
 msPages.Size = UDim2.new(1, 0, 1, 0)
 
 --//configApp rewrite
-	--config app
+--config app
+	disableapp("settingsApp")
 	local configApp = Instance.new("Frame")
 	local appB1 = Instance.new("ImageButton")
 	local UICorner1 = Instance.new("UICorner")
@@ -155,10 +156,10 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 	appB1.Image = icon or "rbxassetid://7027865484"
 
 	UICorner1.CornerRadius = UDim.new(0.25, 0)
-	UICorner1.Parent = appB
+	UICorner1.Parent = appB1
 
 	appT1.Name = "appT"
-	appT1.Parent = appB
+	appT1.Parent = appB1
 	appT1.AnchorPoint = Vector2.new(0.5, 0)
 	appT1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	appT1.BackgroundTransparency = 1.000
