@@ -261,7 +261,7 @@ msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
 msDestroy.TextTransparency = 1.000
 
 msDestroy.MouseButton1Click:Connect(function()
-	toggleapp("settingsApp", true),
+	toggleapp("settingsApp", true)
 	MoonriseLib:Destroy()
 end)
 ------------------------------//functions//------------------------------
