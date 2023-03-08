@@ -179,14 +179,14 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 	local UICorner2 = Instance.new("UICorner")
 	local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint")
 	
-	configApp.Name = "configAppShelf"
-	configApp.Parent = msRewrite
-	configApp.AnchorPoint = Vector2.new(0.5, 0.5)
-	configApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	configApp.BackgroundTransparency = 1.000
-	configApp.BorderSizePixel = 0
-	configApp.Position = UDim2.new(0.150000006, 0, 0.925000012, 0)
-	configApp.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
+	configAppShelf.Name = "configAppShelf"
+	configAppShelf.Parent = msRewrite
+	configAppShelf.AnchorPoint = Vector2.new(0.5, 0.5)
+	configAppShelf.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	configAppShelf.BackgroundTransparency = 1.000
+	configAppShelf.BorderSizePixel = 0
+	configAppShelf.Position = UDim2.new(0.150000006, 0, 0.925000012, 0)
+	configAppShelf.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
 
 	appB2.Name = "appB"
 	appB2.Parent = configApp
@@ -253,9 +253,9 @@ msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
 msDestroy.TextTransparency = 1.000
 
 msDestroy.MouseButton1Click:Connect(function()
-	for i, v in pairs(homeF.appButtons:GetDescendants()) do
-		if v.Visible == false then
-			v.Visible = true
+	for i, enableapp in pairs(homeF.appButtons:GetDescendants()) do
+		if enableapp.Visible == false then
+			enableapp.Visible = true
 		end
 	end
 	MoonriseLib:Destroy()
@@ -498,7 +498,6 @@ end
 function MoonriseLib:Destroy()
 	for i, v in pairs(phoneUI:GetDescendants()) do
 		if string.sub(v.Name, 1, 2) == "ms" then
-			print(v)
 			v:Destroy()
 		end
 	end
