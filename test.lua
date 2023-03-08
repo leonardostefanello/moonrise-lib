@@ -262,7 +262,6 @@ msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
 msDestroy.TextTransparency = 1.000
 
 msDestroy.MouseButton1Click:Connect(function()
-	toggleapp("settingsApp", true)
 	MoonriseLib:Destroy()
 end)
 ------------------------------//functions//------------------------------
@@ -501,6 +500,7 @@ function MoonriseLib:App(name, icon, side)
 end
 
 function MoonriseLib:Destroy()
+	toggleapp("settingsApp", true)
 	for i, v in pairs(phoneUI:GetDescendants()) do
 		if string.sub(v.Name, 1, 2) == "ms" then
 			v:Destroy()
