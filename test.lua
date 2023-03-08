@@ -189,7 +189,7 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 	configAppShelf.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
 
 	appB2.Name = "appB"
-	appB2.Parent = configApp
+	appB2.Parent = configAppShelf
 	appB2.AnchorPoint = Vector2.new(0.5, 0.5)
 	appB2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	appB2.BackgroundTransparency = 1.000
@@ -200,7 +200,7 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 	UICorner2.CornerRadius = UDim.new(0.25, 0)
 	UICorner2.Parent = appB2
 
-	UIAspectRatioConstraint2.Parent = configApp
+	UIAspectRatioConstraint2.Parent = configAppShelf
 
 --//main background
 local msMainBG = Instance.new("ImageLabel")
