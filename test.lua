@@ -49,14 +49,21 @@ local function GetIcon(IconName)
 	end
 end   
 
-function disableapp(oldappname)
-	for i, oldapp in pairs(homeF.appButtons:GetDescendants()) do
-		if oldapp.Name == tostring(oldappname) then
-			oldapp.Visible = false
+function toggleapp(oldappname, toggle)
+	if toggle == true then
+		for i, oldapp in pairs(homeF.appButtons:GetDescendants()) do
+			if oldapp.Name == tostring(oldappname) then
+				oldapp.Visible = true
+			end
+		end
+	elseif toggle == false then 
+		for i, oldapp in pairs(homeF.appButtons:GetDescendants()) do
+			if oldapp.Name == tostring(oldappname) then
+				oldapp.Visible = false
+			end
 		end
 	end
 end
-
 
 ------------------------------//UI//------------------------------
 --//app folder
@@ -130,7 +137,7 @@ msPages.Size = UDim2.new(1, 0, 1, 0)
 
 --//configApp rewrite
 --config app
-	disableapp("settingsApp")
+	toggleapp("settingsApp", false)
 	local configApp = Instance.new("Frame")
 	local appB1 = Instance.new("ImageButton")
 	local UICorner1 = Instance.new("UICorner")
@@ -254,11 +261,7 @@ msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
 msDestroy.TextTransparency = 1.000
 
 msDestroy.MouseButton1Click:Connect(function()
-	for i, enableapp in pairs(homeF.appButtons:GetDescendants()) do
-		if enableapp.Visible == false then
-			enableapp.Visible = true
-		end
-	end
+	toggleapp("settingsApp", true),
 	MoonriseLib:Destroy()
 end)
 ------------------------------//functions//------------------------------
