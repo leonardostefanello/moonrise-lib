@@ -131,7 +131,9 @@ function MoonriseLib:App(name, icon, side)
 	if side == "Right" then
 		side = msAppsR
 	elseif side == "Left" then 
-		side = msAppsR
+		side = msAppsL
+	else
+		print("\Moonrise Library - Failed to find the app side!")
 	end
 	
 	NewApp.Name = string.lower(name).."App"
