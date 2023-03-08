@@ -49,62 +49,16 @@ local function GetIcon(IconName)
 	end
 end   
 
+function disableapp(oldappname)
+	for i, oldapp in pairs(homeF.appButtons:GetDescendants()) do
+		if oldapp.Name == tostring(oldappname) then
+			oldapp.Visible = false
+		end
+	end
+end
+
+
 ------------------------------//UI//------------------------------
---//destroy button
-local msDestroy = Instance.new("TextButton")
-
-msDestroy.Name = "msDestroy"
-msDestroy.Parent = phoneUI.screenF
-msDestroy.AnchorPoint = Vector2.new(1, 0.5)
-msDestroy.BackgroundTransparency = 1.000
-msDestroy.BorderSizePixel = 0
-msDestroy.Position = UDim2.new(-0.0397357531, 0, 0.162435979, 0)
-msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
-msDestroy.TextTransparency = 1.000
-
-msDestroy.MouseButton1Click:Connect(function()
-	print("destroy")
-	MoonriseLib:Destroy()
-end)
-
---//main background
-local msMainBG = Instance.new("ImageLabel")
-msMainBG.Name = "msMainBG"
-msMainBG.Parent = homeF
-msMainBG.AnchorPoint = Vector2.new(0.5, 0.5)
-msMainBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-msMainBG.BorderSizePixel = 0
-msMainBG.Position = UDim2.new(0.5, 0, 0.5, 0)
-msMainBG.Size = UDim2.new(1, 0, 1, 0)
-msMainBG.Image = "rbxassetid://12166869331"
-
---//lockF things
-local msLockBG = Instance.new("ImageLabel")
-local msSecret = Instance.new("TextLabel")
-
-msLockBG.Name = "msLockBG"
-msLockBG.Parent = phoneUI.screenF.screenFrame.lockF
-msLockBG.AnchorPoint = Vector2.new(0.5, 0.5)
-msLockBG.BackgroundTransparency = 1.000
-msLockBG.BorderSizePixel = 0
-msLockBG.Position = UDim2.new(0.5, 0, 0.5, 0)
-msLockBG.Size = UDim2.new(1, 0, 1, 0)
-msLockBG.Image = "rbxassetid://7048616202"
-
-msSecret.Name = "msSecret"
-msSecret.Parent = phoneUI.screenF.screenFrame.lockF
-msSecret.AnchorPoint = Vector2.new(0.5, 0.5)
-msSecret.BackgroundTransparency = 1.000
-msSecret.BorderSizePixel = 0
-msSecret.Position = UDim2.new(0.5, 0, 0.949999988, 0)
-msSecret.Size = UDim2.new(1, 0, 0.0305686034, 0)
-msSecret.Font = Enum.Font.Unknown
-msSecret.Text = "soo many bugs in this game, who is going to fix it? me?"
-msSecret.TextColor3 = Color3.fromRGB(255, 255, 255)
-msSecret.TextScaled = true
-msSecret.TextSize = 5.000
-msSecret.TextWrapped = true
-
 --//app folder
 local msApps = Instance.new("Frame")
 
@@ -174,6 +128,138 @@ msPages.BorderSizePixel = 0
 msPages.ClipsDescendants = true
 msPages.Size = UDim2.new(1, 0, 1, 0)
 
+--//configApp rewrite
+	--config app
+	local configApp = Instance.new("Frame")
+	local appB1 = Instance.new("ImageButton")
+	local UICorner1 = Instance.new("UICorner")
+	local appT1 = Instance.new("TextLabel")
+	local UIAspectRatioConstraint1 = Instance.new("UIAspectRatioConstraint")
+	
+	configApp.Name = "configApp"
+	configApp.Parent = msRewrite
+	configApp.AnchorPoint = Vector2.new(0.5, 0.5)
+	configApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	configApp.BackgroundTransparency = 1.000
+	configApp.BorderSizePixel = 0
+	configApp.Position = UDim2.new(0.850000024, 0, 0.125, 0)
+	configApp.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
+
+	appB1.Name = "appB"
+	appB1.Parent = configApp
+	appB1.AnchorPoint = Vector2.new(0.5, 0.5)
+	appB1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	appB1.BackgroundTransparency = 1.000
+	appB1.Position = UDim2.new(0.5, 0, 0.5, 0)
+	appB1.Size = UDim2.new(1, 0, 1, 0)
+	appB1.Image = icon or "rbxassetid://7027865484"
+
+	UICorner1.CornerRadius = UDim.new(0.25, 0)
+	UICorner1.Parent = appB
+
+	appT1.Name = "appT"
+	appT1.Parent = appB
+	appT1.AnchorPoint = Vector2.new(0.5, 0)
+	appT1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	appT1.BackgroundTransparency = 1.000
+	appT1.Position = UDim2.new(0.5, 0, 1.04999995, 0)
+	appT1.Size = UDim2.new(1, 0, 0.280000001, 0)
+	appT1.Text = "Settings"
+	appT1.TextColor3 = Color3.fromRGB(255, 255, 255)
+	appT1.TextScaled = true
+	appT1.TextSize = 14.000
+	appT1.TextStrokeTransparency = 0.900
+	appT1.TextWrapped = true
+
+	UIAspectRatioConstraint1.Parent = configApp
+	
+	--config app (shelf)
+	local configAppShelf = Instance.new("Frame")
+	local appB2 = Instance.new("ImageButton")
+	local UICorner2 = Instance.new("UICorner")
+	local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint")
+	
+	configApp.Name = "configAppShelf"
+	configApp.Parent = msRewrite
+	configApp.AnchorPoint = Vector2.new(0.5, 0.5)
+	configApp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	configApp.BackgroundTransparency = 1.000
+	configApp.BorderSizePixel = 0
+	configApp.Position = UDim2.new(0.150000006, 0, 0.925000012, 0)
+	configApp.Size = UDim2.new(0.175914049, 0, 0.0806562379, 0)
+
+	appB2.Name = "appB"
+	appB2.Parent = configApp
+	appB2.AnchorPoint = Vector2.new(0.5, 0.5)
+	appB2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	appB2.BackgroundTransparency = 1.000
+	appB2.Position = UDim2.new(0.5, 0, 0.5, 0)
+	appB2.Size = UDim2.new(1, 0, 1, 0)
+	appB2.Image = "rbxassetid://7027865484"
+
+	UICorner2.CornerRadius = UDim.new(0.25, 0)
+	UICorner2.Parent = appB2
+
+	UIAspectRatioConstraint2.Parent = configApp
+
+--//main background
+local msMainBG = Instance.new("ImageLabel")
+msMainBG.Name = "msMainBG"
+msMainBG.Parent = homeF
+msMainBG.AnchorPoint = Vector2.new(0.5, 0.5)
+msMainBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+msMainBG.BorderSizePixel = 0
+msMainBG.Position = UDim2.new(0.5, 0, 0.5, 0)
+msMainBG.Size = UDim2.new(1, 0, 1, 0)
+msMainBG.Image = "rbxassetid://12166869331"
+
+--//lockF things
+local msLockBG = Instance.new("ImageLabel")
+local msSecret = Instance.new("TextLabel")
+
+msLockBG.Name = "msLockBG"
+msLockBG.Parent = phoneUI.screenF.screenFrame.lockF
+msLockBG.AnchorPoint = Vector2.new(0.5, 0.5)
+msLockBG.BackgroundTransparency = 1.000
+msLockBG.BorderSizePixel = 0
+msLockBG.Position = UDim2.new(0.5, 0, 0.5, 0)
+msLockBG.Size = UDim2.new(1, 0, 1, 0)
+msLockBG.Image = "rbxassetid://7048616202"
+
+msSecret.Name = "msSecret"
+msSecret.Parent = phoneUI.screenF.screenFrame.lockF
+msSecret.AnchorPoint = Vector2.new(0.5, 0.5)
+msSecret.BackgroundTransparency = 1.000
+msSecret.BorderSizePixel = 0
+msSecret.Position = UDim2.new(0.5, 0, 0.949999988, 0)
+msSecret.Size = UDim2.new(1, 0, 0.0305686034, 0)
+msSecret.Font = Enum.Font.Unknown
+msSecret.Text = "soo many bugs in this game, who is going to fix it? me?"
+msSecret.TextColor3 = Color3.fromRGB(255, 255, 255)
+msSecret.TextScaled = true
+msSecret.TextSize = 5.000
+msSecret.TextWrapped = true
+
+--//destroy button
+local msDestroy = Instance.new("TextButton")
+
+msDestroy.Name = "msDestroy"
+msDestroy.Parent = phoneUI.screenF
+msDestroy.AnchorPoint = Vector2.new(1, 0.5)
+msDestroy.BackgroundTransparency = 1.000
+msDestroy.BorderSizePixel = 0
+msDestroy.Position = UDim2.new(-0.0397357531, 0, 0.162435979, 0)
+msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
+msDestroy.TextTransparency = 1.000
+
+msDestroy.MouseButton1Click:Connect(function()
+	for i, v in pairs(homeF.appButtons:GetDescendants()) do
+		if v.Visible == false then
+			v.Visible = true
+		end
+	end
+	MoonriseLib:Destroy()
+end)
 ------------------------------//functions//------------------------------
 --//make app
 function MoonriseLib:App(name, icon, side)
