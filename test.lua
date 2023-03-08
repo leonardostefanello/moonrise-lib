@@ -60,10 +60,10 @@ msDestroy.BackgroundTransparency = 1.000
 msDestroy.BorderSizePixel = 0
 msDestroy.Position = UDim2.new(-0.0397357531, 0, 0.162435979, 0)
 msDestroy.Size = UDim2.new(0.0500000007, 0, -0.0611280501, 60)
-msDestroy.Text = ""
 msDestroy.TextTransparency = 1.000
 
 msDestroy.MouseButton1Click:Connect(function()
+	print("destroy")
 	MoonriseLib:Destroy()
 end)
 
