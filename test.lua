@@ -127,6 +127,12 @@ function MoonriseLib:App(name, icon, side)
 	local UICorner = Instance.new("UICorner")
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
+	if side == "Right" then
+		side = msAppsR
+	elseif side == "Left" then 
+		side = msAppsR
+	end
+	
 	NewApp.Name = string.lower(name).."App"
 	NewApp.Parent = side
 	NewApp.AnchorPoint = Vector2.new(0.5, 0.5)
